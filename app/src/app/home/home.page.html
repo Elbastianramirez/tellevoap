@@ -1,16 +1,94 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Menu Principal
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
 
 <ion-content [fullscreen]="true">
+
+
   <div id="container">
-    <div class="container" style="padding: 5%;">
-      <ion-title>Inicio</ion-title>
-      <br>
-      <p>Seleccione su tipo de usuario</p>
-      <br>
-    </div>
-    
+    <ion-avatar id="avatar" #avatar>
+      <img alt="Usuario"
+        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR80qdu1KhTgFEHwdk_J-hwasYpzhriwrAqDvSgoNsJxaOHNNkK_afyR1h--JyfVMuokQ4&usqp=CAU">
+    </ion-avatar>
+    <ion-card>
+      <ion-card-header>
+        <ion-card-title>Usuario</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <ion-list>
 
-    <ion-button [routerLink]="['/login']" color="primary">Conductor</ion-button> 
-    <ion-button [routerLink]="['/login']" color="dark">Pasajero</ion-button>
+          <ion-item>
+            <ion-input [(ngModel)]="user.usuario" label="Usuario" labelPlacement="floating"
+              placeholder="Ingrese Usuario"></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-input [(ngModel)]="user.password" label="Contraseña" type="password" labelPlacement="floating"
+              placeholder="Ingrese Contraseña">
+            </ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-toggle aria-label="Success toggle" color="success" [checked]="true">Recordar</ion-toggle>
+          </ion-item><br>
+          <ion-item>
+            <mat-progress-bar mode="indeterminate"></mat-progress-bar>
+          </ion-item>
+          <ion-button (click)="enviarInformacion()" size="small" shape="round">Conectar</ion-button><br>
+          <br>
+          <ion-button id="open-modal" shape="round" size="small">
+            Registrarse
+          </ion-button><br>
+          <!--  
+          <ion-button [routerLink]="['/login']" shape="round" size="small">
+            Redirect
+          </ion-button><br>
+          -->
+          <ion-button [routerLink]="['/api-test']" size="small" shape="round">
+            API Module
+          </ion-button>
+          <div>
+
+            <h1>{{mensaje}}</h1><br>
+          </div>
+        </ion-list>
+      </ion-card-content>
+    </ion-card>
+
+
+    <ion-alert trigger="present-alert" header="Registro" subHeader="{{mensaje}}" [buttons]="alertButtons"></ion-alert>
+    <ion-modal trigger="open-modal">
+      <ng-template>
+        <ion-header>
+          <ion-toolbar>
+            <ion-buttons slot="start">
+              <ion-button (click)="cancel()">Salir</ion-button>
+            </ion-buttons>
+            <ion-title>Registro</ion-title>
+            <ion-buttons slot="end" id="present-alert">
+              <ion-button (click)="confirm()" [strong]="true">Confirmar</ion-button>
+            </ion-buttons>
+          </ion-toolbar>
+        </ion-header>
+        <ion-content class="ion-padding">
+          <ion-item>
+            <ion-input [(ngModel)]="user.usuario" label="Usuario" labelPlacement="floating"
+              placeholder="Ingrese Usuario"></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-input [(ngModel)]="user.password" label="Contraseña" type="password" labelPlacement="floating"
+              placeholder="Ingrese Contraseña"></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-label>{{estado}}</ion-label>
+          </ion-item>
+        </ion-content>
+      </ng-template>
+    </ion-modal>
+
+
+
   </div>
-
 </ion-content>
