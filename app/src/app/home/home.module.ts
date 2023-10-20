@@ -13,7 +13,7 @@ import { MatProgressBarModule } from '@angular/material/progress-bar';
     CommonModule,
     FormsModule,
     IonicModule,
-    HomePageRoutingModule
+    HomePageRoutingModule,
     MatProgressBarModule
   ],
   declarations: [HomePage]

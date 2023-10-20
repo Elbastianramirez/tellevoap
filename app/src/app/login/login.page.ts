@@ -18,7 +18,6 @@ export class LoginPage implements OnInit {
   public informacion = {
     nombre: "",
     apellido: "",
-    carrera: "",
     fecha: ""
   }
 

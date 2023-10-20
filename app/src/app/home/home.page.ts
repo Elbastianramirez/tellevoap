@@ -52,7 +52,7 @@ export class HomePage {
         }
         this.router.navigate(['/login'], navigationExtras);
       } else {
-        this.mensaje = "Porfavor ingrese sus datos correctamente";
+        this.mensaje = "Nombre de usuario o contraseña invalidos";
       }
     });
   }

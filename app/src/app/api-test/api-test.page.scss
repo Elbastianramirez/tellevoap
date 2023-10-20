@@ -30,7 +30,17 @@
   text-decoration: none;
 }
 
+#avatar {
+  margin: auto;
+  width: 200px;
+  height: 200px;
+}
 
-ion-header {
-  text-align: center;
+#carta ion-item {
+  margin: auto;
+}
+
+#cuadroAPI {
+  color: white;
+  
 }

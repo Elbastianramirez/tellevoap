@@ -15,9 +15,9 @@
   </ion-header>
   <div id="container">
     <h1 id="titulo">
-      Bienvenido!
+      Bienvenido {{user.usuario}}!
     </h1>
-    <ion-label>Usuario: {{user.usuario}}</ion-label><br><br>
+
     <div>
       <ion-router-outlet></ion-router-outlet>
     </div>
@@ -27,16 +27,6 @@
         slot="start"></ion-input>
       <ion-input [(ngModel)]="informacion.apellido" type="text" expand="full" label="Apellido"
         placeholder="Ingrese Apellido" slot="start"></ion-input>
-      <ion-select [(ngModel)]="informacion.nivel" label="Carrera asociada" interface="action-sheet"
-        placeholder="Seleccione Opcion" slot="center">
-        <ion-select-option value="Ingenieria en informatica">Informatica</ion-select-option>
-        <ion-select-option value="Gastronomia">Gastronomia</ion-select-option>
-        <ion-select-option value="Ecoturismo">Ecoturismo</ion-select-option>
-        <ion-select-option value="Comercio exterior">Comercio Exterior</ion-select-option>
-      </ion-select>
-      <ion-input [(ngModel)]="informacion.fecha" type="date" expand="full" label="Fecha Nacimiento"
-        placeholder="Ingrese Fecha" slot="start">
-      </ion-input>
       <ion-button id="present-alert">
         Mostrar
       </ion-button>
@@ -46,4 +36,3 @@
     subHeader="Su nombre es {{informacion.nombre}} {{informacion.apellido}}" [buttons]="alertButtons"></ion-alert>
 
 </ion-content>
-<app-footer></app-footer>
