@@ -1,0 +1,68 @@
+.center-card{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   height: 100px;
+   margin-bottom: 30px;
+
+ }
+
+.btn-login{
+   display: flex;
+   background-color: var(--ion-color-login-btn);
+   margin-top: 50px;
+}
+
+.contraseña{
+   display: flex;
+   justify-content: center;
+}
+
+.registro{
+   bottom: 40px;
+   display: flex;
+   align-items: end;
+}
+
+.registro-2{
+   display: flex;
+   align-items: flex-end;
+}
+
+
+.input-correo-login{
+   display: block;
+   position: absolute;
+   bottom: 260px;
+}
+
+.input-contraseña-login{
+   display: block;
+   position: absolute;
+   bottom: 140px;
+}
+
+a{
+   text-decoration: none;
+}
+
+.logo-tellevoapp{
+   position: absolute;
+   width: 180px;
+   bottom:80px;
+}
+
+.titulo-inicio-sesion{
+   position: relative;
+   bottom: 10px;
+}
+
+.link-recuperar-contraseña{
+   position: absolute;
+   top: -60px;
+}
+
+.link-registro-login{
+   position: absolute;
+   left: 0px;
+}

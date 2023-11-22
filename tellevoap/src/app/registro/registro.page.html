@@ -1,0 +1,29 @@
+<ion-card class="card-box">
+
+  <ion-card-header class="center-card">
+
+    <ion-card-title>Registrarse</ion-card-title>
+
+  </ion-card-header>
+
+  <ion-card-content>
+
+    <ion-input [(ngModel)]="registrar.nombre">Nombre </ion-input>
+    <ion-input [(ngModel)]="registrar.correo">Correo electronico</ion-input>
+    <ion-input type="password" [(ngModel)]="registrar.psw1">Contraseña</ion-input>
+    <ion-input type="password" [(ngModel)]="registrar.psw2">Confirmar contraseña</ion-input>
+    <ion-list> 
+      <ion-item>
+        <ion-select [(ngModel)]="registrar.usuario" placeholder="Seleccionar">
+          <div slot="label">Tipo de usuario</div>
+          <ion-select-option value="conductor">Conductorr</ion-select-option>
+          <ion-select-option value="pasajero">Pasajero</ion-select-option>
+        </ion-select>
+      </ion-item>
+    </ion-list>
+
+    <ion-button class="btn-registro" (click)="fnvalidarvacios(registrar)">Registrarse</ion-button>
+
+  </ion-card-content>
+
+</ion-card>

@@ -1,0 +1,43 @@
+<ion-card class="card-box">
+
+  <ion-card-header class="registro-2">
+
+    <p>¿No tienes una cuenta?</p>
+
+  </ion-card-header>
+
+  <ion-card-header class="registro">
+
+    <a id="link-registro" href="/registro">Registrate</a>
+
+  </ion-card-header>
+
+
+  <ion-card-header class="center-card">
+
+    <ion-card-title class="titulo-inicio-sesion">Inicio sesión</ion-card-title>
+
+    <img src="../../assets/746839fc-deb9-4030-b5af-528550974883.png" alt="logo-tellevoapp" class="logo-tellevoapp">
+
+  </ion-card-header>
+
+  <ion-card-content class="input-login">
+
+    <ion-input [(ngModel)]="loginuser.correo">Correo electronico</ion-input>
+    <ion-input [(ngModel)]="loginuser.psw" type="password">Contraseña</ion-input>
+
+    <ion-list>
+      <ion-item>
+        <ion-select [(ngModel)]="loginuser.usuario" placeholder="Seleccionar">
+          <div slot="label">Tipo de usuario</div>
+          <ion-select-option value="conductor">Conductor</ion-select-option>
+          <ion-select-option value="pasajero">Pasajero</ion-select-option>
+        </ion-select>
+      </ion-item>
+    </ion-list>
+
+    <ion-button class="btn-login" (click)="fnvalidarvacios(loginuser)">Ingresar</ion-button>
+
+  </ion-card-content>
+
+</ion-card>
